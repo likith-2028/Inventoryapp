@@ -27,5 +27,4 @@ public interface Demand_repos extends JpaRepository<Demand, Integer>{
 	@Query(value = "SELECT quantity FROM demand WHERE itemid_fk=:itemid AND demand_type='HARD_PROMISED'",nativeQuery = true)
 	public List<Integer> getHardPromisedCountByOnlyItemid(@Param("itemid") int itemid);
 
-	
 }

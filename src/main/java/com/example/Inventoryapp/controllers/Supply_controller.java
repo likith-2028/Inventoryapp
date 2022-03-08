@@ -90,4 +90,3 @@ public class Supply_controller {
 		return supply;	
 	}
 }
-

@@ -1,10 +1,7 @@
 package com.example.Inventoryapp.controllers;
 
 
-import java.awt.print.Printable;
 import java.util.List;
-import java.util.stream.IntStream;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

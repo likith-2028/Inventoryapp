@@ -1,13 +1,10 @@
 package com.example.Inventoryappjavamodels;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 
 @Entity(name = "supply")
@@ -66,7 +63,7 @@ public class Supply {
 		this.quantity = quantity;
 	}
 
-	public int getItemid() {
+	public int getItem() {
 		return itemid;
 	}
 
@@ -74,18 +71,18 @@ public class Supply {
 		this.itemid = itemid;
 	}
 
-	public int getLocationid() {
+	public int getLocation() {
 		return locationid;
 	}
 
-	public void setLocationid(int locationid) {
+	public void setLocation(int locationid) {
 		this.locationid = locationid;
 	}
 
 	@Override
 	public String toString() {
-		return "Supply [supplyid=" + supplyid + ", supplyType=" + supplyType + ", quantity=" + quantity + ", itemid="
-				+ itemid + ", locationid=" + locationid + "]";
+		return "Supply [supplyid=" + supplyid + ", supplyType=" + supplyType + ", quantity=" + quantity + ", item="
+				+ itemid + ", location=" + locationid + "]";
 	}
 
 	public void setItemid(Items item) {

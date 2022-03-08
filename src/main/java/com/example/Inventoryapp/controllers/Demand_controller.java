@@ -19,7 +19,7 @@ import com.example.Inventoryappjavamodels.*;
 
 @RestController()
 public class Demand_controller {
-	//hi
+
 	@Autowired
 	Demand_repos demandRepository;
 	
@@ -91,4 +91,3 @@ public class Demand_controller {
 		return demand;	
 	}
 }
-
