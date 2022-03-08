@@ -10,15 +10,15 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.example.Inventoryappjavamodels.*;
+import com.example.Inventoryapp.javamodels.*;
 
 
 
 
 
-@RepositoryRestResource(itemResourceRel = "supply",path = "supplies")
+@RepositoryRestResource
 public interface Supply_repos extends JpaRepository<Supply, Integer>{
-	public List<Supply> findByItemid(Items itemid);
+	public List<Supply> findByItemid(int itemid);
 	@Query(value = "SELECT * FROM supply WHERE itemid_fk=:itemid AND locationid_fk=:locationid",nativeQuery = true)
 	public List<Supply> findByItemidLocationid(@Param("itemid") int itemid,@Param("locationid") int locationid);
 	

@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.Inventoryapp.javamodels.*;
 import com.example.Inventoryapp.main.Supplies;
 import com.example.Inventoryapp.repositories.*;
-import com.example.Inventoryappjavamodels.*;
 
 
-@RestController()
+@RestController
 public class Supply_controller {
 	
 	@Autowired
@@ -44,16 +44,16 @@ public class Supply_controller {
 	}
 	
 	@GetMapping("/supply")
-	public List<Supply> getAllSupply(){
+	public List<Supply> getAllSupply1(){
 		return supplyRepository.findAll();
 	}
 	
 	@GetMapping("/supply/{itemid}")
 	public List<Supply> getSupplyByItemid(@PathVariable int itemid){
-		System.out.println("hai");
-		Items item = itemRepository.findById(itemid).get();
-		System.out.println(item);
-		return supplyRepository.findByItemid(item);
+		//System.out.println("hai");
+    	//Items item = itemRepository.findById(itemid).get();
+		//System.out.println(item);
+		return supplyRepository.findByItemid(itemid);
 	}
 	
 	@DeleteMapping("/supply/{locationid}/{itemid}")

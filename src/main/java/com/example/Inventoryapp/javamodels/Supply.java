@@ -1,4 +1,4 @@
-package com.example.Inventoryappjavamodels;
+package com.example.Inventoryapp.javamodels;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -63,7 +63,7 @@ public class Supply {
 		this.quantity = quantity;
 	}
 
-	public int getItem() {
+	public int getItemid() {
 		return itemid;
 	}
 
@@ -71,11 +71,11 @@ public class Supply {
 		this.itemid = itemid;
 	}
 
-	public int getLocation() {
+	public int getLocationid() {
 		return locationid;
 	}
 
-	public void setLocation(int locationid) {
+	public void setLocationid(int locationid) {
 		this.locationid = locationid;
 	}
 

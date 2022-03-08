@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.Inventoryapp.javamodels.*;
 import com.example.Inventoryapp.main.Demandtools;
 import com.example.Inventoryapp.repositories.*;
-import com.example.Inventoryappjavamodels.*;
 
 
 
@@ -44,8 +44,8 @@ public class Demand_controller {
 		return demand;	
 	}
 	
-	@GetMapping("/supply")
-	public List<Demand> getAllSupply(){
+	@GetMapping("/demand")
+	public List<Demand> getAllDemand(){
 		return demandRepository.findAll();
 	}
 	
@@ -54,7 +54,7 @@ public class Demand_controller {
 		System.out.println("hai");
 		Items item = itemRepository.findById(itemid).get();
 		System.out.println(item);
-		return demandRepository.findByItemid(item);
+		return demandRepository.findByItemid(itemid);
 	}
 	
 	@DeleteMapping("/demand/{locationid}/{itemid}")

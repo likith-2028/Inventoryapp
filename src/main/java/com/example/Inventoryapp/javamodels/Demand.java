@@ -1,4 +1,4 @@
-package com.example.Inventoryappjavamodels;
+package com.example.Inventoryapp.javamodels;
 
 
 import javax.persistence.CascadeType;
@@ -9,6 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 
 @Entity(name = "demand")

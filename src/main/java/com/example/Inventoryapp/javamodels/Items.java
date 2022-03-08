@@ -1,4 +1,4 @@
-package com.example.Inventoryappjavamodels;
+package com.example.Inventoryapp.javamodels;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
